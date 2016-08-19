@@ -1,0 +1,2 @@
+# ngorient
+Angular OrientDB Framework
