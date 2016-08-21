@@ -23,9 +23,11 @@
   "bugs": {
     "url": "https://github.com/AlexVangelov/ngorient/issues"
   },
-  "devDependencies": {
+  "dependencies": {
     "orientjs": "~2.2.2",
-    "type": "0.0.3",
     "ejs": "~2.5.1"
+  },
+  "devDependencies": {
+    "type": "0.0.3"
   }
 }

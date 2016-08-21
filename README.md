@@ -1,18 +1,19 @@
 # ngorient
 Angular OrientDB Framework
 
-###Idea:
+So far:
 
-ngorient generate layout
+    npm install ngorient --save-dev
+    npm install orientjs --save-dev
+    
+    node_modules/.bin/orientjs --password=<rootPassword> db create mydb document plocal
+      Creating database with name: mydb
+      done.
 
-ngorient generate model Accounts[ORestricted] user:OUser name:String   
-ngorient generate scaffold SpotTypes[ORestricted,OTriggered] account:Account symbol:String description:String
-ngorient generate scaffold Spots[ORestricted] account:Account spotType:SpotType number:Integer
+    node_modules/.bin/ngorient generate migration SpotType[ORestricted] symbol:String name:String
+    node_modules/.bin/orientjs -U=admin -P=admin --dbname=mydb migrate up
+      Applying all available migrations...
+      Applied 1 migration(s):
+          m20160821_000826_createSpotType
 
-ngorient generate migration addAccountNameFulltextIndex[Account]	name:fulltext
-ngorient generate migration addSpotTypeAccountSymbolUniqueIndex[SpotType] unique:[account,symbol]
-ngorient generate migration addSpotAccountNumberUniqueIndex[Spot] unique:[account,number]
-
-ngorient g model ContactInfo[ORestricted] account:Account country:String city:String state:String postalCode:Integer address:String phone:String email:String 
-
-ngorient g migration onSpotTypeBeforeDeleteTrigger[SpotType] onBeforeDelete:validateNoSpots
+    node_modules/.bin/orientjs -U=admin -P=admin --dbname=mydb migrate up
