@@ -16,4 +16,7 @@ So far:
       Applied 1 migration(s):
           m20160821_000826_createSpotType
 
-    node_modules/.bin/orientjs -U=admin -P=admin --dbname=mydb migrate up
+    node_modules/.bin/orientjs -U=admin -P=admin --dbname=mydb migrate down
+      Reverting a maximum of 1 migration(s)...
+      Reverted 1 migration(s):
+          m20160821_000826_createSpotType
