@@ -1,6 +1,6 @@
 {
   "name": "ngorient",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Angular OrientDB Framework",
   "main": "index.js",
   "scripts": {
